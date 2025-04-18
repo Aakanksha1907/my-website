@@ -1,0 +1,299 @@
+footer p a{
+  color:#fff;
+  font-size: larger;
+}
+footer p{
+  background-color: #fff;
+  color:black;
+  font-size: 1.9rem;
+}
+nav {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 2.01rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.9rem;
+  justify-content: center;
+  text-align: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  justify-content: center;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+h3{
+  text-align: center;
+  gap: 2.00rem;
+  font-size: 1.5rem;
+}
+footer{
+  background-color: black;
+  color: #fff;
+}
+/* Card Container – displays cards in a row */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+/* ✅ Section Background Image */
+.section-bg {
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  color:white;
+  position: relative;
+}
+
+.section-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+  z-index: 0;
+}
+
+.section-bg h2,
+.section-bg .card,
+.section-bg p,
+.section-bg h3 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix card text on dark background */
+.section-bg .card {
+  background: black
+}
+
+/* ✅ Ensure footer is visible */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  background: #222;
+  color: white;
+  text-align: center;
+}
+/* ✅ Section background (same as homepage style) */
+.section-bg {
+  background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  color: white;
+  position: relative;
+}
+
+.section-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.section-bg h2,
+.section-bg .card,
+.section-bg p,
+.section-bg h3 {
+  position: relative;
+  z-index: 1;
+}
+
+/* ✅ Card styling */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* ✅ Icon beside text */
+.icon {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+/* ✅ Slideshow Header */
+/* ✅ SLIDESHOW HEADER */
+.slideshow-header {
+  height: 60vh;
+  background-image:"D:\web\campingbooking\demo\Screenshot 2025-04-10 205808.png" ;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 1s ease-in-out;
+}
+
+/* ✅ Overlay for text */
+.slideshow-header .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* ✅ Background section for details */
+.details-page {
+  background-image: url('https://source.unsplash.com/1600x900/?camping,tent');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Overlay for readability */
+.details-page .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  border-radius: 10px;
+  color: white;
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+}
+
+.details-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.details-page .info p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.details-page .info button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.details-page .info button:hover {
+  background-color: #1b5e20;
+}
+
+/* ✅ Background Image for the Booking Page */
+.booking-page {
+  background-image: url('https://source.unsplash.com/1600x900/?camping,lodge');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Overlay for better text readability */
+.booking-page .overlay {
+  background:skyblue;
+  padding: 3rem;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 10px;
+  color:black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.booking-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.booking-page p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* ✅ Styling for Booking Form */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-form label {
+  font-size: 1.9rem;
+  color:black;
+}
+
+.booking-form input, .booking-form button {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.booking-form input[type="text"], .booking-form input[type="email"], .booking-form input[type="date"] .booking-form input[type="date"]{
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.booking-form button {
+  background-color:snow;
+  color:black;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.booking-form button:hover {
+  background-color:pink;
+}

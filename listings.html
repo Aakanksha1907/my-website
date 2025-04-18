@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Camping Adventure | Listings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ✅ NAVBAR -->
+<nav>
+  <div class="logo">CampingAdventure</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="listings.html">Listings</a></li>
+    <li><a href="details.html">Details</a></li>
+    <li><a href="booking.html">Booking</a></li>
+  </ul>
+</nav>
+
+<!-- ✅ LISTINGS SECTION WITH BACKGROUND -->
+<section class="listings section-bg">
+  <h2>Explore Campsites & Lodges</h2>
+  <div class="card-container">
+    
+    <div class="card">
+      <img src="mountain camp.png" />
+      <h3>Mountain Camp</h3>
+      <p>Sunrise trails, pine forests and fresh air.</p>
+      <a href="details.html?spot=Mountain Camp"><button>View Details</button></a>
+    </div>
+
+    <div class="card">
+      <img src="p2.png" />
+      <h3> Forest Lodge</h3>
+      <p>Secluded cabins deep in nature’s heart.</p>
+      <a href="details.html?spot=Forest Lodge"><button>View Details</button></a>
+    </div>
+
+    <div class="card">
+      <img src="p3.png" />
+      <h3>Lakeside Cabin</h3>
+      <p>Relax beside peaceful water and starlit skies.</p>
+      <a href="details.html?spot=Lakeside Cabin"><button>View Details</button></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ✅ FOOTER -->
+<footer>
+  <p>© 2025 Camping Adventure. Nature is calling.</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Camping Adventure | Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ✅ NAVBAR -->
+<nav>
+  <div class="logo">CampingAdventure</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="listings.html">Listings</a></li>
+    <li><a href="details.html">Details</a></li>
+    <li><a href="booking.html">Booking</a></li>
+  </ul>
+</nav>
+
+<!-- ✅ SLIDESHOW SECTION -->
+<header class="slideshow-header">
+  <div class="overlay">
+    <h1 id="locationTitle">Adventure Location</h1>
+  </div>
+</header>
+
+<!-- ✅ DETAILS SECTION -->
+<section class="details">
+  <p><strong>Amenities:</strong> WiFi, Firepit, Parking, Hot Showers</p>
+  <p><strong>Activities:</strong> Hiking, Stargazing, Kayaking</p>
+  <p><strong>Price:</strong> $85 per night</p>
+  <a href="booking.html"><button>Book Now</button></a>
+</section>
+
+<!-- ✅ FOOTER -->
+<footer>
+  <p><a href="listings.html">← Back to Listings</a></p>
+</footer>
+
+<!-- ✅ SCRIPT TO UPDATE TITLE -->
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const spot = params.get('spot');
+  if (spot) {
+    document.getElementById('locationTitle').innerText = spot;
+  }
+</script>
+
+<!-- ✅ SLIDESHOW SCRIPT -->
+<script>
+  const images = [
+    "https://source.unsplash.com/1600x900/?camping,forest",
+    "https://source.unsplash.com/1600x900/?camping,mountain",
+    "https://source.unsplash.com/1600x900/?camping,lake"
+  ];
+  let index = 0;
+  const header = document.querySelector(".slideshow-header");
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    header.style.backgroundImage = `url('${images[index]}')`;
+  }, 5000); // Change every 5 seconds
+</script>
+
+</body>
+</html>
